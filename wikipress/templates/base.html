@@ -1,33 +1,283 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="ru">
-  <head href="{% static 'css/bootstrap.min.css' %}">
-    <meta charset="utf-8">
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="{% static 'img/fav/fav.ico' %}" type="image">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/fav/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/fav/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/fav/favicon-16x16.png' %}">
-    <meta name="msapplication-TileColor" content="#000">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  <title>
-    {% block title %}
-      Название страницы
-    {% endblock %}
-  </title>
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name='robots' content='max-image-preview:large'>
+    <link rel='dns-prefetch' href='//s.w.org'>
+    <link href='https://fonts.gstatic.com' crossorigin="" rel='preconnect'>
+
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/block-editor.css' %}">
+    <link rel="stylesheet" href="{% static 'ht-wiki-demo-mode.css' %}">
+    <link rel="stylesheet" href="{% static 'mfp.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/admin-bar.min.css' %}">
+    <link rel="stylesheet" href="style/css/includes/buttons.min.css">
+    <link rel="stylesheet" href="style/css/includes/dashicons.min.css">
+    <link rel="stylesheet" href="style/css/includes/editor.min.css">
+    <link rel="stylesheet" href="style/css/includes/media-views.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/block-editor/style.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/block-library/editor.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/block-library/reset.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/block-library/style.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/components/style.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/edit-post/classic.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/edit-post/style.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/editor/style.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/nux/style.min.css">
+    <link rel="stylesheet" href="style/css/includes/dist/reusable-blocks/style.min.css">
+
+
+    <script type='text/javascript' src="{% static 'js/includes/jquery/jquery.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/jquery/-migrate.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/ht-wiki-demo-mode.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/ht-wiki-frontend-editor.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/ht-wiki-revisions-js.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/htwiki-js.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/htwiki-nav-magic.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jquery.livesearch.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/regenerator-runtime.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/wp-polyfill.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/hooks.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/i18n.min.js' %}"></script>
+
+    <script type='text/javascript' id='wp-i18n-js-after'>
+      wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+    </script>
+    <script type='text/javascript' id='utils-js-extra'>
+      /* <![CDATA[ */
+      var userSettings = {"url":"\/","uid":"0","time":"1675508408","secure":"1"};
+      /* ]]> */
+    </script>
+
+    <script type='text/javascript' src="{% static 'js/includes/utils.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/plupload/moxie.min.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/includes/plupload/plupload.min.js' %}"></script>
+
+    <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/wikipress.demo.launchandsell.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.6"}};
+      !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+          display: inline !important;
+          border: none !important;
+          box-shadow: none !important;
+          height: 1em !important;
+          width: 1em !important;
+          margin: 0 .07em !important;
+          vertical-align: -0.1em !important;
+          background: none !important;
+          padding: 0 !important;
+        }
+    </style>
+    <style id='wp-block-directory-inline-css' type='text/css'>
+      :root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-border-width-focus:2px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.block-directory-block-ratings>span{display:flex}.block-directory-block-ratings svg{fill:#1e1e1e;margin-left:-4px}.block-directory-block-ratings .block-directory-block-ratings__star-empty{fill:#ccc}.block-directory-compact-list{margin:0;list-style:none}.block-directory-compact-list__item{display:flex;flex-direction:row;align-items:center;margin-bottom:16px}.block-directory-compact-list__item:last-child{margin-bottom:0}.block-directory-compact-list__item-details{margin-left:8px}.block-directory-compact-list__item-title{font-weight:500}.block-directory-compact-list__item-author{color:#757575;font-size:11px}.block-directory-downloadable-block-icon{min-width:54px;width:54px;height:54px;vertical-align:middle;border:1px solid #ddd}.block-directory-downloadable-block-list-item{padding:12px;width:100%;height:auto;text-align:left;display:grid;grid-template-columns:auto 1fr}.block-directory-downloadable-block-list-item:hover{box-shadow:0 0 0 2px var(--wp-admin-theme-color)}.block-directory-downloadable-block-list-item.is-busy{background:transparent}.block-directory-downloadable-block-list-item.is-busy .block-directory-downloadable-block-list-item__author{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.block-directory-downloadable-block-list-item:disabled,.block-directory-downloadable-block-list-item[aria-disabled]{opacity:1}.block-directory-downloadable-block-list-item__icon{position:relative;margin-right:16px;align-self:flex-start}.block-directory-downloadable-block-list-item__icon .block-directory-downloadable-block-list-item__spinner{position:absolute;top:0;right:0;bottom:0;left:0;background:hsla(0,0%,100%,.75);display:flex;align-items:center;justify-content:center}.block-directory-block-ratings{display:block;margin-top:4px}.block-directory-downloadable-block-list-item__details{color:#1e1e1e}.block-directory-downloadable-block-list-item__title{display:block;font-weight:600}.block-directory-downloadable-block-list-item__author{display:block;margin-top:4px;font-weight:400}.block-directory-downloadable-block-list-item__desc{display:block;margin-top:8px}.block-directory-downloadable-block-notice{margin:8px 0 0;color:#cc1818}.block-directory-downloadable-block-notice__content{padding-right:12px;margin-bottom:8px}.block-directory-downloadable-blocks-panel{padding:16px}.block-directory-downloadable-blocks-panel.has-blocks-loading{font-style:normal;padding:0;margin:112px 0;text-align:center;color:#757575}.block-directory-downloadable-blocks-panel.has-blocks-loading .components-spinner{float:inherit}.block-directory-downloadable-blocks-panel__no-local{margin:48px 0;padding:0 64px;color:#757575;text-align:center}.block-directory-downloadable-blocks-panel__title{margin:0 0 4px;font-size:14px}.block-directory-downloadable-blocks-panel__description{margin-top:0}.block-directory-downloadable-blocks-panel button{margin-top:4px}.installed-blocks-pre-publish-panel__copy{margin-top:0}
+    </style>
+    <style id='wp-format-library-inline-css' type='text/css'>
+      :root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-border-width-focus:2px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.block-editor-format-toolbar__image-popover{z-index:159990}.block-editor-format-toolbar__image-container-content{display:flex}.block-editor-format-toolbar__image-container-content .components-button{align-self:flex-end;height:30px;margin-bottom:8px;margin-right:8px;padding:0 6px}.block-editor-format-toolbar__image-container-value{margin:7px;flex-grow:1;flex-shrink:1;white-space:nowrap;min-width:150px;max-width:500px}.block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__field{margin-bottom:0}.block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__label{display:block}.block-editor-format-toolbar__link-container-content{display:flex}.block-editor-format-toolbar__link-container-value{margin:7px;flex-grow:1;flex-shrink:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:150px;max-width:500px}.block-editor-format-toolbar__link-container-value.has-invalid-link{color:#cc1818}.components-inline-color__indicator{position:absolute;background:#000;height:3px;width:20px;bottom:6px;left:auto;right:auto;margin:0 5px}.components-inline-color-popover .components-popover__content>div{padding:20px 18px}.components-inline-color-popover .components-popover__content .components-color-palette{margin-top:.6rem}.components-inline-color-popover .components-popover__content .components-base-control__title{display:block;margin-bottom:16px;font-weight:600;color:#191e23}.components-inline-color-popover .components-popover__content .component-color-indicator{vertical-align:text-bottom}.format-library-text-color-button{position:relative}.format-library-text-color-button__indicator{height:4px;width:20px;position:absolute;bottom:10px;left:8px}
+    </style>
+    <link rel='stylesheet' id='buttons-css' href='wp-includes/css/buttons.min.css?ver=5.8.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='dashicons-css' href='wp-includes/css/dashicons.min.css?ver=5.8.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='mediaelement-css' href='wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type='text/css' media='all'>      <link rel='stylesheet' id='wp-mediaelement-css' href='wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.8.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='media-views-css' href='wp-includes/css/media-views.min.css?ver=5.8.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='imgareaselect-css' href='wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8' type='text/css' media='all'>
+    <link rel='stylesheet' id='editor-buttons-css' href='wp-includes/css/editor.min.css?ver=5.8.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=5.8.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='magnific-popup-styles-css' href='wp-content/plugins/ht-wiki-demo-mode/css/mfp.css?ver=5.8.6' type='text/css' media=''>
+    <link rel='stylesheet' id='ht-wiki-demo-mode-styles-css' href='wp-content/plugins/ht-wiki-demo-mode/css/ht-wiki-demo-mode.css?ver=5.8.6' type='text/css' media=''>
+    <link rel='stylesheet' id='wikipress-style-css' href='style/css/style.css' type='text/css' media='all'>
+    
+
+		<!-- define global rtl setting, otherwise revisions.js complains -->
+		<script type="text/javascript">
+				window.isRtl = 0;
+				window.adminpage = 'revision-php';
+		</script>
+      <style id="kirki-inline-styles">.wkp-header, .wkp-userinfo .wkp-userinfo__contentwrap, body.page-template-template-login, form input[type="submit"], form .wkp-formsubmit{background:#1B499A;}.wkp-article__editbtn a:hover, .wkp-article__addbtn a:hover{color:#1B499A;}.wkp-userinfo .wkp-userinfo__contentwrap::before{background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1B499A 100%);}.wkp-postlist svg path, .wkp-catlist svg path{fill:#1B499A;}.wp-block-quote{border-color:#1B499A;}a{color:#1B499A;}a:hover{color:#1B499A;}.wkp-mainnav>ul a, .wkp-mainnav>ul ul a, .wkp-userinfo__content a .wkp-userinfo__name{color:#ffffff;}h1, h2, h3, h4, h5, h6{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}.editor-post-title__block .editor-post-title__input{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}html{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}.edit-post-visual-editor.editor-styles-wrapper{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}/* cyrillic-ext */
+      /* @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4taVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+      }
+      /* cyrillic */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      /* greek-ext */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4saVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+1F00-1FFF;
+      }
+      /* greek */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4jaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0370-03FF;
+      }
+      /* hebrew */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      /* vietnamese */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4vaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVQUwaEQXjM.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* cyrillic-ext */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4taVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+      }
+      /* cyrillic */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4kaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      /* greek-ext */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4saVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+1F00-1FFF;
+      }
+      /* greek */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4jaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0370-03FF;
+      }
+      /* hebrew */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4iaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      /* vietnamese */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4vaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVQUwaEQXjN_mQ.woff) format('woff');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVQUwaEQXjM.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }</style> */
+    <title>
+      {% block title %}
+        Название страницы
+      {% endblock %}
+    </title>
   </head>
   <body>
-    <header>
+    <!-- <header>
       {% include "includes/header.html" %}
-    </header>
+    </header> -->
     <main>
       {% block content %}
         Контент не подвезли
       {% endblock %}
       </div>
     </main>
-    <footer>
+    <!-- <footer>
       {% include "includes/footer.html" %}
-    </footer>
+    </footer> -->
   </body>
 </html>

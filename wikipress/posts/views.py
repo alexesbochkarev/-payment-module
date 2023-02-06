@@ -9,4 +9,4 @@ from .models import Post, Group
 def index(request):
     template = 'posts/index.html'
     post_list = Post.objects.select_related('author', 'group').all()
-    return render(request, template, post_list)
+    return render(request, template)
