@@ -1,0 +1,46 @@
+{% load static %} 
+ <!-- .wkp-header -->
+    <div class="wkp-header">
+  
+        <div class="wkp-logo">
+          <a href="{% url 'posts:index' %}">
+            <img src="{% static 'img\wikipress-logo.png' %}"> 
+          </a>
+        </div>
+        
+        <nav id="wkp-mainnav" class="wkp-mainnav" data-nav-state="inactive">
+    
+          <div id="wkp-mainnav__mobile" class="wkp-mainnav__mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g fill="#fff"><path d="M15 7H1c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1z"></path><path d="M15 1H1c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1zM15 13H1c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1z"></path></g></svg>
+          </div>
+            <ul>
+              {% for groups in group %}
+                <li data-nav-state="active">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><polyline fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="3.5,6.5 8,11 12.5,6.5"></polyline></svg>
+                    <a href="category/finance-hr/index.htm">{{ groups.title }}</a>
+                  </span>
+                  <ul>
+                    {% for post in groups.posts.all %}
+                    <li><a href="2021/03/31/employee-appraisals/index.htm">{{ post.title }}</a></li>
+                    {% endfor %}
+                  </ul>  
+                </li>
+              {% endfor %}
+            </ul>
+        </nav>
+          
+      <div class="wkp-userinfo wkp-userinfo--guest">
+        <div class="wkp-userinfo__contentwrap">
+        
+          <div class="wkp-userinfo__content">
+            <a href="login/index.htm">
+              <img alt='' src="{% static 'img/none.png' %}" srcset="{% static 'img/none-1.png' %}" class='avatar avatar-32 photo avatar-default' height='32' width='32' loading='lazy'>				<span class="wkp-userinfo__name">Login</span>
+            </a>
+          </div>
+      
+          </div>
+      </div>    
+    
+    </div>
+    <!-- /.wkp-header -->

@@ -15,6 +15,7 @@ class Group(models.Model):
         
 
 class Post(models.Model):
+    title = models.CharField('Название поста', help_text='Введите название поста', max_length = 50)
     text = models.TextField('Текст поста', help_text='Введите текст поста')
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,

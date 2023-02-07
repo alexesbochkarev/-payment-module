@@ -9,31 +9,36 @@
     <meta name='robots' content='max-image-preview:large'>
     <link rel='dns-prefetch' href='//s.w.org'>
     <link href='https://fonts.gstatic.com' crossorigin="" rel='preconnect'>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    </style>
 
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/block-editor.css' %}">
-    <link rel="stylesheet" href="{% static 'ht-wiki-demo-mode.css' %}">
-    <link rel="stylesheet" href="{% static 'mfp.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/ht-wiki-demo-mode.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/mfp.css' %}"> -->
     <link rel="stylesheet" href="{% static 'css/includes/admin-bar.min.css' %}">
-    <link rel="stylesheet" href="style/css/includes/buttons.min.css">
-    <link rel="stylesheet" href="style/css/includes/dashicons.min.css">
-    <link rel="stylesheet" href="style/css/includes/editor.min.css">
-    <link rel="stylesheet" href="style/css/includes/media-views.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/block-editor/style.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/block-library/editor.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/block-library/reset.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/block-library/style.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/components/style.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/edit-post/classic.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/edit-post/style.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/editor/style.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/nux/style.min.css">
-    <link rel="stylesheet" href="style/css/includes/dist/reusable-blocks/style.min.css">
+
+
+    <link rel="stylesheet" href="{% static 'css/includes/buttons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dashicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/editor.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/media-views.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/block-editor/style.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/includes/dist/block-library/editor.min.cs' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/includes/dist/block-library/reset.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/block-library/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/components/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/edit-post/classic.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/edit-post/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/editor/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/includes/dist/nux/style.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/includes/dist/reusable-blocks/style.min.cs' %}"> -->
 
 
     <script type='text/javascript' src="{% static 'js/includes/jquery/jquery.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/jquery/-migrate.min.js' %}"></script>
+    <!-- <script type='text/javascript' src="{% static 'js/includes/jquery/-migrate.min.js' %}"></script> -->
     <script type='text/javascript' src="{% static 'js/ht-wiki-demo-mode.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/ht-wiki-frontend-editor.min.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/ht-wiki-revisions-js.min.js' %}"></script>
@@ -43,12 +48,9 @@
     <script type='text/javascript' src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/includes/dist/vendor/regenerator-runtime.min.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/includes/dist/vendor/wp-polyfill.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/hooks.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/i18n.min.js' %}"></script>
+    <!-- <script type='text/javascript' src="{% static 'js/includes/dist/vendor/hooks.min.js' %}"></script> -->
+    <!-- <script type='text/javascript' src="{% static 'js/includes/dist/vendor/i18n.min.js' %}"></script> -->
 
-    <script type='text/javascript' id='wp-i18n-js-after'>
-      wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-    </script>
     <script type='text/javascript' id='utils-js-extra'>
       /* <![CDATA[ */
       var userSettings = {"url":"\/","uid":"0","time":"1675508408","secure":"1"};
@@ -83,201 +85,23 @@
     <style id='wp-format-library-inline-css' type='text/css'>
       :root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-border-width-focus:2px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.block-editor-format-toolbar__image-popover{z-index:159990}.block-editor-format-toolbar__image-container-content{display:flex}.block-editor-format-toolbar__image-container-content .components-button{align-self:flex-end;height:30px;margin-bottom:8px;margin-right:8px;padding:0 6px}.block-editor-format-toolbar__image-container-value{margin:7px;flex-grow:1;flex-shrink:1;white-space:nowrap;min-width:150px;max-width:500px}.block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__field{margin-bottom:0}.block-editor-format-toolbar__image-container-value.components-base-control .components-base-control__label{display:block}.block-editor-format-toolbar__link-container-content{display:flex}.block-editor-format-toolbar__link-container-value{margin:7px;flex-grow:1;flex-shrink:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:150px;max-width:500px}.block-editor-format-toolbar__link-container-value.has-invalid-link{color:#cc1818}.components-inline-color__indicator{position:absolute;background:#000;height:3px;width:20px;bottom:6px;left:auto;right:auto;margin:0 5px}.components-inline-color-popover .components-popover__content>div{padding:20px 18px}.components-inline-color-popover .components-popover__content .components-color-palette{margin-top:.6rem}.components-inline-color-popover .components-popover__content .components-base-control__title{display:block;margin-bottom:16px;font-weight:600;color:#191e23}.components-inline-color-popover .components-popover__content .component-color-indicator{vertical-align:text-bottom}.format-library-text-color-button{position:relative}.format-library-text-color-button__indicator{height:4px;width:20px;position:absolute;bottom:10px;left:8px}
     </style>
-    <link rel='stylesheet' id='buttons-css' href='wp-includes/css/buttons.min.css?ver=5.8.6' type='text/css' media='all'>
-    <link rel='stylesheet' id='dashicons-css' href='wp-includes/css/dashicons.min.css?ver=5.8.6' type='text/css' media='all'>
-    <link rel='stylesheet' id='mediaelement-css' href='wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type='text/css' media='all'>      <link rel='stylesheet' id='wp-mediaelement-css' href='wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.8.6' type='text/css' media='all'>
-    <link rel='stylesheet' id='media-views-css' href='wp-includes/css/media-views.min.css?ver=5.8.6' type='text/css' media='all'>
-    <link rel='stylesheet' id='imgareaselect-css' href='wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8' type='text/css' media='all'>
-    <link rel='stylesheet' id='editor-buttons-css' href='wp-includes/css/editor.min.css?ver=5.8.6' type='text/css' media='all'>
-    <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=5.8.6' type='text/css' media='all'>
-    <link rel='stylesheet' id='magnific-popup-styles-css' href='wp-content/plugins/ht-wiki-demo-mode/css/mfp.css?ver=5.8.6' type='text/css' media=''>
-    <link rel='stylesheet' id='ht-wiki-demo-mode-styles-css' href='wp-content/plugins/ht-wiki-demo-mode/css/ht-wiki-demo-mode.css?ver=5.8.6' type='text/css' media=''>
-    <link rel='stylesheet' id='wikipress-style-css' href='style/css/style.css' type='text/css' media='all'>
-    
+    <style id="kirki-inline-styles">.wkp-header, .wkp-userinfo .wkp-userinfo__contentwrap, body.page-template-template-login, form input[type="submit"], form .wkp-formsubmit{background:#1B499A;}.wkp-article__editbtn a:hover, .wkp-article__addbtn a:hover{color:#1B499A;}.wkp-userinfo .wkp-userinfo__contentwrap::before{background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1B499A 100%);}.wkp-postlist svg path, .wkp-catlist svg path{fill:#1B499A;}.wp-block-quote{border-color:#1B499A;}a{color:#1B499A;}a:hover{color:#1B499A;}.wkp-mainnav>ul a, .wkp-mainnav>ul ul a, .wkp-userinfo__content a .wkp-userinfo__name{color:#ffffff;}h1, h2, h3, h4, h5, h6{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}.editor-post-title__block .editor-post-title__input{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}html{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}.edit-post-visual-editor.editor-styles-wrapper{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}</style>
+
 
 		<!-- define global rtl setting, otherwise revisions.js complains -->
 		<script type="text/javascript">
 				window.isRtl = 0;
 				window.adminpage = 'revision-php';
-		</script>
-      <style id="kirki-inline-styles">.wkp-header, .wkp-userinfo .wkp-userinfo__contentwrap, body.page-template-template-login, form input[type="submit"], form .wkp-formsubmit{background:#1B499A;}.wkp-article__editbtn a:hover, .wkp-article__addbtn a:hover{color:#1B499A;}.wkp-userinfo .wkp-userinfo__contentwrap::before{background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1B499A 100%);}.wkp-postlist svg path, .wkp-catlist svg path{fill:#1B499A;}.wp-block-quote{border-color:#1B499A;}a{color:#1B499A;}a:hover{color:#1B499A;}.wkp-mainnav>ul a, .wkp-mainnav>ul ul a, .wkp-userinfo__content a .wkp-userinfo__name{color:#ffffff;}h1, h2, h3, h4, h5, h6{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}.editor-post-title__block .editor-post-title__input{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}html{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}.edit-post-visual-editor.editor-styles-wrapper{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}/* cyrillic-ext */
-      /* @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4taVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-      }
-      /* cyrillic */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-      }
-      /* greek-ext */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4saVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+1F00-1FFF;
-      }
-      /* greek */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4jaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0370-03FF;
-      }
-      /* hebrew */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-      }
-      /* vietnamese */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4vaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-      }
-      /* latin-ext */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-      }
-      /* latin */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVQUwaEQXjM.woff) format('woff');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-      }
-      /* cyrillic-ext */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4taVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-      }
-      /* cyrillic */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4kaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-      }
-      /* greek-ext */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4saVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+1F00-1FFF;
-      }
-      /* greek */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4jaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0370-03FF;
-      }
-      /* hebrew */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4iaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
-      }
-      /* vietnamese */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4vaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
-      }
-      /* latin-ext */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVQUwaEQXjN_mQ.woff) format('woff');
-        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-      }
-      /* latin */
-      @font-face {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-stretch: normal;
-        font-display: swap;
-        src: url(wp-content/fonts/open-sans/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVQUwaEQXjM.woff) format('woff');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-      }</style> */
+		</script> 
     <title>
       {% block title %}
         Название страницы
       {% endblock %}
     </title>
   </head>
-  <body>
-    <!-- <header>
-      {% include "includes/header.html" %}
-    </header> -->
-    <main>
+
       {% block content %}
-        Контент не подвезли
+          Контент не подвезли
       {% endblock %}
-      </div>
-    </main>
-    <!-- <footer>
-      {% include "includes/footer.html" %}
-    </footer> -->
-  </body>
+
 </html>
