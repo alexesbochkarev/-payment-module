@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 
 User = get_user_model()
@@ -8,7 +9,6 @@ User = get_user_model()
 class Group(models.Model):
     title = models.CharField(max_length=200, verbose_name='Имя')
     slug = models.SlugField(max_length=50, unique=True, verbose_name='Адрес')
-    description = models.TextField(verbose_name='Описание')
 
     def __str__(self):
         return self.title

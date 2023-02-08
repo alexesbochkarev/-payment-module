@@ -10,7 +10,7 @@
   <!-- .wkp-sitecontainer -->
   <div class="wkp-sitecontainer">
 
-  {% include "posts/header.html" %}  
+  {% include "posts/header.html" %}
 
   <!-- .wkp-main -->
   <main class="wkp-main">
@@ -39,13 +39,13 @@
                 <span class="wkp-article__btn wkp-article__btn--add">
                   <a href="index-1.htm?view=notallowed">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewbox="0 0 16 16"><g transform="translate(0, 0)"><polyline points="6.5 15.5 0.5 15.5 0.5 0.5 13.5 0.5 13.5 5.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></polyline>
-            <line x1="6.5" y1="4.5" x2="10.5" y2="4.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
-            <line x1="3.5" y1="10.5" x2="4.5" y2="10.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
-            <line x1="3.5" y1="4.5" x2="4.5" y2="4.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
-            <line x1="3.5" y1="7.5" x2="6.5" y2="7.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
-            <circle cx="11.5" cy="11.5" r="4" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></circle>
-            <line x1="11.5" y1="9.5" x2="11.5" y2="13.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line>
-            <line x1="9.5" y1="11.5" x2="13.5" y2="11.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line></g></svg>Add Article            
+                      <line x1="6.5" y1="4.5" x2="10.5" y2="4.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
+                      <line x1="3.5" y1="10.5" x2="4.5" y2="10.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
+                      <line x1="3.5" y1="4.5" x2="4.5" y2="4.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
+                      <line x1="3.5" y1="7.5" x2="6.5" y2="7.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
+                      <circle cx="11.5" cy="11.5" r="4" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></circle>
+                      <line x1="11.5" y1="9.5" x2="11.5" y2="13.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line>
+                      <line x1="9.5" y1="11.5" x2="13.5" y2="11.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line></g></svg>Add Article            
                   </a>
                 </span>
               </li>
@@ -53,27 +53,10 @@
           </div>
     
         </div>
-    
-        <div class="wkp-article__thearticle">
-    
-          <h1 class="wkp-article__title">Wiki</h1>
-    
-          
-            <ul class="wkp-catlist">
-          
-              {% for group in group %}
-
-                <li>
-                    <a href='#'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="#4071fc" d="M15 3H8.4L5.7.3C5.5.1 5.3 0 5 0H1C.4 0 0 .4 0 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4c0-.6-.4-1-1-1z"></path></svg>
-                    {{ group.title }}</a>
-                </li>
-              
-              {% endfor %}
-      
-            </ul>
-    
-        </div>
+        
+        {% block contents %}
+            Контент не подвезли
+        {% endblock %}
     
       </article>
     
