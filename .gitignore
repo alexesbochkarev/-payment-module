@@ -130,3 +130,5 @@ dmypy.json
 
 /wikipress/static
 /static
+
+/wikipress/media

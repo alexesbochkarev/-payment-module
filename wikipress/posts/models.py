@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 User = get_user_model()
@@ -15,8 +16,8 @@ class Group(models.Model):
         
 
 class Post(models.Model):
-    title = models.CharField('Название поста', help_text='Введите название поста', max_length = 50)
-    text = models.TextField('Текст поста', help_text='Введите текст поста')
+    title = models.CharField('Название поста', max_length = 50)
+    text = CKEditor5Field('Текст поста', config_name='extends')
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='posts',

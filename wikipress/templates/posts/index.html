@@ -24,20 +24,22 @@
           <div class="wkp-article__search">     
             <form class="wkp-site-search" method="get" action="https://wikipress.demo.launchandsell.com/">
                 <label class="wkp-screen-reader-text" for="wkp-search">Search For</label>
-                <input id="wkp-search" class="wkp-site-search__field" type="text" value="" placeholder="Search the wiki..." name="s" autocomplete="off">
-                <img class="wkp-site-search__loader" src="{% static 'svg/icon-loader.svg' %}"alt="Searching...">
+                <input id="wkp-search" class="wkp-site-search__field" type="text" value="" placeholder="Поиск по сайту..." name="s" autocomplete="off">
+                <img class="wkp-site-search__loader" src="{% static 'svg/icon-loader.svg' %}" alt="Searching...">
                   <input type="hidden" name="lang" value="">
                 <button class="wkp-site-search__button" type="submit"><span>Search</span></button>
             </form>
           </div>
           
           <div class="wkp-article__controls">
-              <ul>
+            {% if user.is_authenticated %}
+            <ul>
                 
-          
+              {% block edit %}{% endblock  %}
+
               <li>
                 <span class="wkp-article__btn wkp-article__btn--add">
-                  <a href="index-1.htm?view=notallowed">
+                  <a href="{% url 'posts:post_create' %}">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewbox="0 0 16 16"><g transform="translate(0, 0)"><polyline points="6.5 15.5 0.5 15.5 0.5 0.5 13.5 0.5 13.5 5.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></polyline>
                       <line x1="6.5" y1="4.5" x2="10.5" y2="4.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
                       <line x1="3.5" y1="10.5" x2="4.5" y2="10.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
@@ -50,6 +52,7 @@
                 </span>
               </li>
             </ul> 
+            {% endif %}
           </div>
     
         </div>
@@ -63,5 +66,18 @@
     </div>
   
   </main>
+  <script>
+    document.querySelectorAll( 'oembed[url]' ).forEach( element => {
+        // Create the <a href="..." class="embedly-card"></a> element that Embedly uses
+        // to discover the media.
+        const anchor = document.createElement( 'a' );
 
+        anchor.setAttribute( 'href', element.getAttribute( 'url' ) );
+        anchor.className = 'embedly-card';
+
+        element.appendChild( anchor );
+    } );
+  </script>
+
+</body>  
 {% endblock %}

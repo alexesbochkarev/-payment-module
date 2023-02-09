@@ -1,0 +1,46 @@
+{% extends "posts/index.html" %}
+
+{% block title %}
+  {% if is_edit %}
+    Редактировать пост
+  {% else %}
+    Добавить пост
+  {% endif %}
+{% endblock %}
+
+{% block contents %}
+    <div class="wkp-article__thearticle">
+        
+        <h1 class="wkp-article__title">
+            {% if is_edit %}
+                Редактировать пост
+            {% else %}
+                Создать пост
+            {% endif %}
+        </h1>
+
+    {% if is_edit %}
+        <form method="post" action="#" enctype="multipart/form-data">
+    {% else %}
+        <form method="post" action="{% url 'posts:post_create' %}" >
+    {% endif %}
+    {% csrf_token %}
+            {{form.media}}
+            {{form.as_p}}
+            
+
+            <button type="submit">
+            {% if is_edit %}
+                Сохранить
+            {% else %}
+                Добавить
+            {% endif %}
+            </button>
+        </form>
+    
+
+        
+
+
+    </div>
+{% endblock  %}

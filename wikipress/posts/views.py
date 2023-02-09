@@ -2,8 +2,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.views import LoginView
+from django.urls import reverse_lazy
+from django.contrib import messages
 
 from .models import Post, Group
+from .forms import PostForm
 # Create your views here.
 
 def group_list(request):
@@ -33,3 +37,47 @@ def post_page(request, post_id):
     context = {'groups': groups,
                'post_list': post_list,}
     return render(request, template , context)
+
+def post_create(request):
+    form = PostForm(request.POST or None, files=request.FILES or None)
+    groups = Group.objects.all()
+    if form.is_valid():
+        new_post = form.save(commit=False)
+        new_post.author = request.user
+        new_post.save()
+        return redirect('posts:index')
+    context = {'groups': groups,
+               'form': form,}
+    return render(request, 'posts/create_post.html', context)
+
+
+def post_edit(request, post_id):
+    post_list = get_object_or_404(Post, id=post_id)
+    form = PostForm(request.POST or None,
+                    files=request.FILES or None,
+                    instance=post_list)
+    author = post_list.author
+    groups = Group.objects.all()
+    if author != request.user:
+        return redirect('posts:index')
+    if form.is_valid():
+        form.save()
+        return redirect('posts:index')
+    context = {
+        'groups': groups,
+        'post_list': post_list,
+        'form': form,
+        'is_edit': True,
+    }
+    return render(request, 'posts/create_post.html', context)
+
+
+class MyLoginView(LoginView):
+    redirect_authenticated_user = True
+    
+    def get_success_url(self):
+        return reverse_lazy('posts:index') 
+    
+    def form_invalid(self, form):
+        messages.error(self.request,'Invalid username or password')
+        return self.render_to_response(self.get_context_data(form=form))    
