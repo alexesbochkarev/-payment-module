@@ -1,0 +1,24 @@
+{% extends "posts/index.html" %}
+
+{% block contents %}
+<div class="wkp-article__thearticle">
+
+    <header class="wkp-article__header">
+      <h1 class="wkp-article__title">Search Results</h1>
+    </header>
+  
+    <ul class="wkp-searchresultslist">
+
+    {% for search_list in search %}              
+      <li>
+        <a href="{% url 'posts:posts' search_list.pk %}">{{search_list.title}}</a>
+      </li>
+    {% endfor %}              
+      
+
+    </ul>
+
+   
+ 
+</div>
+{% endblock  %}

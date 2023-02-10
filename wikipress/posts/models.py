@@ -40,3 +40,5 @@ class Post(models.Model):
     def __str__(self):
         LEN_OF_POST = 15
         return self.text[:LEN_OF_POST]
+
+        

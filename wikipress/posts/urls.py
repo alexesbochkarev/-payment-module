@@ -13,6 +13,7 @@ urlpatterns = [
     path('posts/<int:post_id>/', views.post_page, name='posts_page'),
     path('posts/<slug:slug>/', views.post_list, name='posts'),
     path('create/', views.post_create, name='post_create'),
-    path('login/', views.MyLoginView.as_view(template_name='posts/login.html'), name='login'
-    ),
+    path('login/', views.MyLoginView.as_view(template_name='posts/login.html'), name='login'),
+    path('search/', views.search_list, name='search'),
+    
 ]

@@ -1,10 +1,9 @@
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.views import LoginView
+from django.views.generic import ListView
 from django.urls import reverse_lazy
 from django.contrib import messages
+import json
 
 from .models import Post, Group
 from .forms import PostForm
@@ -37,6 +36,16 @@ def post_page(request, post_id):
     context = {'groups': groups,
                'post_list': post_list,}
     return render(request, template , context)
+
+
+def search_list(request):
+    template = 'posts/search.html'
+    search = Post.objects.filter(title__icontains=request.GET.get('q'))
+    groups = Group.objects.all()
+    context = {'search': search,
+               'groups': groups}
+    return render(request, template, context)
+
 
 def post_create(request):
     form = PostForm(request.POST or None, files=request.FILES or None)
@@ -81,3 +90,7 @@ class MyLoginView(LoginView):
     def form_invalid(self, form):
         messages.error(self.request,'Invalid username or password')
         return self.render_to_response(self.get_context_data(form=form))    
+
+
+    
+    
