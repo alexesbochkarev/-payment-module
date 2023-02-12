@@ -128,7 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-/wikipress/static
-/static
+/wikipress/static/admin
+/wikipress/static/django_ckeditor_5
+
 
 /wikipress/media
