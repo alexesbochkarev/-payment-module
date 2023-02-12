@@ -14,14 +14,14 @@
 
   <!-- .wkp-main -->
   <main class="wkp-main">
-  
+
     <div class="wkp-maincontent">
-    
+
       <article class="wkp-article">
-    
+
         <div class="wkp-article__header">
-    
-          <div class="wkp-article__search">     
+
+          <div class="wkp-article__search">
             <form class="wkp-site-search" method="get" action="{% url 'posts:search' %}">
                 <label class="wkp-screen-reader-text" for="wkp-search">Search For</label>
                 <input id="wkp-search" class="wkp-site-search__field" type="search" type="text" value="" placeholder="Поиск по сайту..." name="q" autocomplete="off">
@@ -30,11 +30,11 @@
                 <button class="wkp-site-search__button" type="submit"><span>Search</span></button>
             </form>
           </div>
-          
+
           <div class="wkp-article__controls">
             {% if user.is_authenticated %}
             <ul>
-                
+
               {% block edit %}{% endblock  %}
 
               <li>
@@ -47,25 +47,27 @@
                       <line x1="3.5" y1="7.5" x2="6.5" y2="7.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round"></line>
                       <circle cx="11.5" cy="11.5" r="4" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></circle>
                       <line x1="11.5" y1="9.5" x2="11.5" y2="13.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line>
-                      <line x1="9.5" y1="11.5" x2="13.5" y2="11.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line></g></svg>Add Article            
+                      <line x1="9.5" y1="11.5" x2="13.5" y2="11.5" fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line></g></svg>Add Article
                   </a>
                 </span>
               </li>
-            </ul> 
+            </ul>
             {% endif %}
           </div>
-    
+
         </div>
-        
+
         {% block contents %}
             Контент не подвезли
         {% endblock %}
-    
+
       </article>
-    
+
     </div>
-  
+
   </main>
+  <script type='text/javascript' src="{% static 'js/includes/jquery/jquery.min.js' %}"></script>
+  <script type='text/javascript' src="{% static 'js/htwiki-js.min.js' %}"></script>
   <script>
     document.querySelectorAll( 'oembed[url]' ).forEach( element => {
         // Create the <a href="..." class="embedly-card"></a> element that Embedly uses
@@ -78,5 +80,5 @@
         element.appendChild( anchor );
     } );
   </script>
-</body>  
+</body>
 {% endblock %}

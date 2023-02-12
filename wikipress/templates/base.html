@@ -16,57 +16,9 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/block-editor.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'css/ht-wiki-demo-mode.css' %}"> -->
-    <!-- <link rel="stylesheet" href="{% static 'css/mfp.css' %}"> -->
     <link rel="stylesheet" href="{% static 'css/includes/admin-bar.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/content-styles.css' %}">
-
-
-    <link rel="stylesheet" href="{% static 'css/includes/buttons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dashicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/editor.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/media-views.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/block-editor/style.min.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'css/includes/dist/block-library/editor.min.cs' %}"> -->
-    <link rel="stylesheet" href="{% static 'css/includes/dist/block-library/reset.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/block-library/style.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/components/style.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/edit-post/classic.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/edit-post/style.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/editor/style.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/includes/dist/nux/style.min.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'css/includes/dist/reusable-blocks/style.min.cs' %}"> -->
-
-
-    <script type='text/javascript' src="{% static 'js/includes/jquery/jquery.min.js' %}"></script>
-    {% comment %} <!-- <script type='text/javascript' src="{% static 'js/includes/jquery/-migrate.min.js' %}"></script> --> {% endcomment %}
-    {% comment %} <script type='text/javascript' src="{% static 'js/ht-wiki-demo-mode.js' %}"></script> {% endcomment %}
-    {% comment %} <script type='text/javascript' src="{% static 'js/ht-wiki-frontend-editor.min.js' %}"></script> {% endcomment %}
-    <script type='text/javascript' src="{% static 'js/ht-wiki-revisions-js.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/htwiki-js.min.js' %}"></script>
-    {% comment %} <script type='text/javascript' src="{% static 'js/htwiki-nav-magic.min.js' %}"></script> {% endcomment %}
-    {% comment %} <script type='text/javascript' src="{% static 'js/jquery.livesearch.js' %}"></script> {% endcomment %}
-    <script type='text/javascript' src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/regenerator-runtime.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/dist/vendor/wp-polyfill.min.js' %}"></script>
-    <!-- <script type='text/javascript' src="{% static 'js/includes/dist/vendor/hooks.min.js' %}"></script> -->
-    <!-- <script type='text/javascript' src="{% static 'js/includes/dist/vendor/i18n.min.js' %}"></script> -->
-    
-
-    <script type='text/javascript' id='utils-js-extra'>
-      /* <![CDATA[ */
-      var userSettings = {"url":"\/","uid":"0","time":"1675508408","secure":"1"};
-      /* ]]> */
-    </script>
-
-    <script type='text/javascript' src="{% static 'js/includes/utils.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/plupload/moxie.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'js/includes/plupload/plupload.min.js' %}"></script>
-
-    <script type="text/javascript">
-      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/wikipress.demo.launchandsell.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.6"}};
-      !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
-    </script>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/content-styles.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'django_ckeditor_5/dist/styles.css' %}">
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -89,12 +41,6 @@
     </style>
     <style id="kirki-inline-styles">.wkp-header, .wkp-userinfo .wkp-userinfo__contentwrap, body.page-template-template-login, form input[type="submit"], form .wkp-formsubmit{background:#1B499A;}.wkp-article__editbtn a:hover, .wkp-article__addbtn a:hover{color:#1B499A;}.wkp-userinfo .wkp-userinfo__contentwrap::before{background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #1B499A 100%);}.wkp-postlist svg path, .wkp-catlist svg path{fill:#1B499A;}.wp-block-quote{border-color:#1B499A;}a{color:#1B499A;}a:hover{color:#1B499A;}.wkp-mainnav>ul a, .wkp-mainnav>ul ul a, .wkp-userinfo__content a .wkp-userinfo__name{color:#ffffff;}h1, h2, h3, h4, h5, h6{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}.editor-post-title__block .editor-post-title__input{font-family:Open Sans;font-weight:700;text-transform:none;color:#32325d;}html{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}.edit-post-visual-editor.editor-styles-wrapper{font-family:Open Sans;font-size:17px;font-weight:400;line-height:1.75;color:#525f7f;}</style>
 
-
-		<!-- define global rtl setting, otherwise revisions.js complains -->
-		<script type="text/javascript">
-				window.isRtl = 0;
-				window.adminpage = 'revision-php';
-		</script>  
     <title>
       {% block title %}
         Название страницы

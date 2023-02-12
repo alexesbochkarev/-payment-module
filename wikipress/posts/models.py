@@ -16,8 +16,8 @@ class Group(models.Model):
         
 
 class Post(models.Model):
-    title = models.CharField('Название поста', max_length = 50)
-    text = CKEditor5Field('Текст поста', config_name='extends')
+    title = models.CharField('Название записи', max_length = 50)
+    text = CKEditor5Field('Текст записи', config_name='extends')
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='posts',
@@ -27,8 +27,7 @@ class Post(models.Model):
                               blank=True,
                               null=True,
                               related_name='posts',
-                              verbose_name='Группа',
-                              help_text='Выберете группу')
+                              verbose_name='Группа')
     pub_date = models.DateTimeField('Дата публикации', auto_now_add=True)
     image = models.ImageField('Картинка', upload_to='posts/', blank=True)
 

@@ -34,7 +34,7 @@ def post_page(request, post_id):
     post_list = get_object_or_404(Post, id=post_id)
     groups = Group.objects.all()
     context = {'groups': groups,
-               'post_list': post_list,}
+               'post_list': post_list}
     return render(request, template , context)
 
 
@@ -88,7 +88,7 @@ class MyLoginView(LoginView):
         return reverse_lazy('posts:index') 
     
     def form_invalid(self, form):
-        messages.error(self.request,'Invalid username or password')
+        messages.error(self.request,'Неправильный логин или пароль')
         return self.render_to_response(self.get_context_data(form=form))    
 
 

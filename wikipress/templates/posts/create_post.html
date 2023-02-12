@@ -2,9 +2,9 @@
 
 {% block title %}
   {% if is_edit %}
-    Редактировать пост
+    Редактировать запись
   {% else %}
-    Добавить пост
+    Добавить запись
   {% endif %}
 {% endblock %}
 
@@ -13,9 +13,9 @@
         
         <h1 class="wkp-article__title">
             {% if is_edit %}
-                Редактировать пост
+                Редактировать запись
             {% else %}
-                Создать пост
+                Создать запись
             {% endif %}
         </h1>
 
@@ -29,7 +29,7 @@
             {{form.as_p}}
             
 
-            <button type="submit">
+            <button class="wkp-formsubmit wkp-formsubmit--fw" type="submit">
             {% if is_edit %}
                 Сохранить
             {% else %}
