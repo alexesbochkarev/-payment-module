@@ -19,7 +19,7 @@ class Group(models.Model):
 class Post(models.Model):
     title = models.CharField('Название записи', max_length = 50)
     text = CKEditor5Field('Текст записи', config_name='extends')
-    slug = models.SlugField(max_length=50, unique=True, verbose_name='Адрес')
+    slug = models.SlugField(max_length=50, verbose_name='Адрес')
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='posts',
