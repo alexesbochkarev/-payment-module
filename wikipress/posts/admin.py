@@ -7,13 +7,15 @@ from .models import Post, Group
 
 class PostAdmin(admin.ModelAdmin):
     # Перечисляем поля, которые должны отображаться в админке
-    list_display = ('pk', 'title', 'text', 'pub_date', 'author', 'group',)
+    list_display = ('pk', 'title', 'short_description', 'pub_date', 'author', 'group', 'slug')
     # Изменение поля group в любом посте
     list_editable = ('group',)
     # Добавляем интерфейс для поиска по тексту постов
     search_fields = ('text',)
     # Добавляем возможность фильтрации по дате
     list_filter = ('pub_date',)
+    # Автозаполнение slug по полю title
+    prepopulated_fields = {'slug': ('title',)}
     empty_value_display = '-пусто-'
 
 

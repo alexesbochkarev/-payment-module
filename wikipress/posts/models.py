@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 from django_ckeditor_5.fields import CKEditor5Field
+from django.template.defaultfilters import truncatechars
 
 
 User = get_user_model()
@@ -18,6 +19,7 @@ class Group(models.Model):
 class Post(models.Model):
     title = models.CharField('Название записи', max_length = 50)
     text = CKEditor5Field('Текст записи', config_name='extends')
+    slug = models.SlugField(max_length=50, unique=True, verbose_name='Адрес')
     author = models.ForeignKey(User,
                                on_delete=models.CASCADE,
                                related_name='posts',
@@ -39,5 +41,8 @@ class Post(models.Model):
     def __str__(self):
         LEN_OF_POST = 15
         return self.text[:LEN_OF_POST]
+    
+    def short_description(self):
+        return truncatechars(self.text, 35)
 
         

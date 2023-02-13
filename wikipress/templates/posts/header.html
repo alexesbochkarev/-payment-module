@@ -22,7 +22,7 @@
                   </span>
                   <ul>
                     {% for post in groups.posts.all %}
-                    <li><a href="{% url 'posts:posts_page' post.pk %}">{{ post.title }}</a></li>
+                    <li><a href="{% url 'posts:posts_page' post.slug %}">{{ post.title }}</a></li>
                     {% endfor %}
                   </ul>  
                 </li>
@@ -30,7 +30,7 @@
             </ul>
         </nav>
           
-      <div class="wkp-userinfo wkp-userinfo--guest">
+      {% comment %} <div class="wkp-userinfo wkp-userinfo--guest">
         <div class="wkp-userinfo__contentwrap">
         
           <div class="wkp-userinfo__content">
@@ -48,7 +48,7 @@
           </div>
       
           </div>
-      </div>    
+      </div>     {% endcomment %}
     
     </div>
     <!-- /.wkp-header -->

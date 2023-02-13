@@ -13,7 +13,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text', 'group')
+        fields = ('title', 'text', 'slug', 'group')
         widgets = {
               'text': CKEditor5Widget(
                   attrs={"class": "django_ckeditor_5"}, config_name="extends"

@@ -29,9 +29,9 @@ def post_list(request, slug):
     return render(request, template , context)
 
 
-def post_page(request, post_id):
+def post_page(request, slug):
     template = 'posts/post_page.html'
-    post_list = get_object_or_404(Post, id=post_id)
+    post_list = get_object_or_404(Post, slug=slug)
     groups = Group.objects.all()
     context = {'groups': groups,
                'post_list': post_list}
@@ -60,8 +60,8 @@ def post_create(request):
     return render(request, 'posts/create_post.html', context)
 
 
-def post_edit(request, post_id):
-    post_list = get_object_or_404(Post, id=post_id)
+def post_edit(request, slug):
+    post_list = get_object_or_404(Post, slug=slug)
     form = PostForm(request.POST or None,
                     files=request.FILES or None,
                     instance=post_list)

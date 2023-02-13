@@ -13,14 +13,14 @@
             {% for posts in group.posts.all %}
 
                 <li style="display: flex;justify-content: space-between;">
-                    <a href="{% url 'posts:posts_page' posts.pk %}">
+                    <a href="{% url 'posts:posts_page' posts.slug %}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><g fill="#4071fc"><path d="M14 0H2c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h12c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1zm-1 14H3V2h10v12z"></path><path data-color="color-2" d="M4 3h4v4H4zM9 4h3v1H9zM9 6h3v1H9zM4 8h8v1H4zM4 10h8v1H4zM4 12h5v1H4z"></path></g></svg>
                         {{ posts.title }}</a>
-                    {% if posts.author == request.user %}
-                    <a href="{% url 'posts:post_edit' posts.pk %}">
+                    {% comment %} {% if posts.author == request.user %}
+                    <a href="{% url 'posts:post_edit' posts.slug %}">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><g fill="none" stroke="#797879" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path data-color="color-2" d="M13 .5L15.5 3l-8 8L4 12l1-3.5zM11 2.5L13.5 5"></path><path d="M13.5 9.5v5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1h5" style="fill:none"></path></g></svg>Редактировать              
                     </a>
-                    {% endif %}
+                    {% endif %} {% endcomment %}
                 </li>
 
             {% endfor %}
